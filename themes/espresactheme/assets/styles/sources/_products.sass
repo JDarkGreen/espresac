@@ -1,0 +1,109 @@
+
+/*
+ * File : Productos Archivo
+ * Contiene : Todos lo estilos relacionados 
+ * a la sección / página - Productos
+ */
+
+//Contenedor Section Productos Home
+#sectionFeaturedProducts
+	padding : 50px 0
+
+//Items Preview
+.ProductPreview
+	
+	//Image
+	.image-preview
+		+box-shadow( 2px 2px 8px rgba(0,0,0,.4) , -2px -2px 8px rgba(0,0,0,.4) )
+		background-size: cover 
+		border         : 3px solid white 
+		box-sizing     : border-box
+		height         : 220px
+		margin         : 0 auto 10px
+		width          : 100% 
+
+		//hover 
+		&:hover 
+			.bg-more 
+				+opacity(1)
+
+	//Title 
+	h2
+		background : #17583B
+		color      : white
+		font-size  : 16px
+		font-weight: 700
+		line-height: 1em
+		padding    : 13px 0 
+
+//Productos Destacados
+.itemProductPreview--featured
+	margin-right: 37px
+	max-width   : calc( 100%/3 - (37px*2) / 3 )
+
+	//terceros elementos y ultimos
+	&:nth-child(3n) , &:last-child 
+		margin-right : 0px 
+
+
+//Buttom details producto
+.btn-details-product	
+	+border-radius( 10px )
+	+box-shadow( inset 0 0 0 0 transparent )
+	+transition( box-shadow 500ms ease-in , color 600ms ease )
+	//hover 
+	background     : #DFDFE1
+	color          : black 
+	display        : block 
+	font-family    : "Arial" , sans-serif 
+	font-size      : 14px 
+	margin         : 0 auto 
+	padding        : 6px 0 
+	text-decoration: none !important 
+	text-transform : uppercase 
+	width          : 90%
+	&:hover 
+		+box-shadow( inset 300px 0 0 0 black )
+		color: white 
+
+//Single Detail Product
+.singleDetailProduct
+	
+	//Imágen Destacada
+	.featured-image 
+		border : 1px solid #C5C5C5
+
+	//Indicadores de galería
+	.gallery_indicator 
+		border    : 1px solid #C5C5C5
+		box-sizing: border-box
+		display   : inline-block 
+		padding   : 1px
+
+//Título de Producto
+.productTitle
+	font-family: 'Helvetica57'
+	font-size  : 16px
+	font-weight: 600
+//Codigo
+.productCode
+	font-family: 'Helvetica57'
+	font-size  : 14px
+	font-weight: 600
+
+//Detalles Títulos
+.detailTitle
+	font-size  : 14px
+	font-family: 'Helvetica57'
+	font-weight: 600
+
+//Item color
+.item-color
+	i
+		+border-radius(50%)
+		border        : 0.5px solid rgba(0,0,0,.1)
+		display       : inline-block 
+		height        : 15px 
+		margin        : 0 5px 0 0
+		vertical-align: middle  
+		width         : 15px

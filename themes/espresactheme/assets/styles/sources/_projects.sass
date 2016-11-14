@@ -1,0 +1,40 @@
+
+/*
+ * File : Projectos Archivo
+ * Contiene : Todos lo estilos relacionados 
+ * a la sección / página - Projectos
+ */
+
+#sectionInicioProjects
+	background     : url('../images/backgrounds/fondo_espresac_prefabricados.jpg') no-repeat
+	background-size: cover 
+	padding        : 50px
+
+/*
+ * Item Preview de Projecto
+ */
+.ProjectPreview
+	width : 100%
+
+	.image-preview
+		border    : 3px solid #ffffff
+		box-sizing: border-box
+		height    : 223px
+		margin    : 0 auto 13px
+		overflow  : hidden
+		img 
+			+transition( all 700ms ease )
+			width : auto
+
+		//hover 
+		&:hover 
+			.bg-more 
+				+opacity(1)
+
+	//Título
+	h2 
+		color      : white 
+		font-family: "Open Sans" , sans-serif
+		font-size  : 18px
+		font-weight: 600 
+

@@ -1,0 +1,486 @@
+
+/*
+ * File : Secciones Comunes Archivo
+ * Contiene : Todos lo estilos relacionados 
+ * a la sección / página - Comunes 
+ */
+
+/*
+ * RESET
+ */
+
+
+/*
+ * DISPLAYS 
+ */
+.flexible 
+	display    : flex 
+.flexible-wrap 
+	flex-wrap  : wrap 
+.align-items-center 
+	align-items: center 
+
+.space-between 
+	justify-content : space-between 
+.space-around
+	justify-content : space-around
+
+.justify-center
+	justify-content : center
+
+/*
+ * TAMAÑO
+ */
+.full-width 
+	width : 100%
+
+/*
+ * POSICIONES 
+ */
+
+//Relativo
+.relative 
+	position: relative 
+
+/*
+ * WRAPPER O CONTENEDORES CON MEDIDA
+ */
+
+//Contenedor de Contenido Página
+.pageContentLayout
+	padding : 80px 0
+
+.wrapperLayoutPage
+	display  : block 
+	margin   : 0 auto 
+	max-width: 1000px 
+	width    : 100%
+
+
+/*
+ * BOTONES 
+ */
+
+//Ver Más
+.btn-show-more
+	+border-radius( 8px )
+	+box-shadow( inset -2px -1px 7px 1px #008BBB ) 
+	background     : #00B0F2
+	color          : white 
+	display        : inline-block 
+	font-family    : 'Arial'
+	font-size      : 16px !important
+	line-height    : 1em
+	margin         : 0 auto
+	padding        : 12px 25px
+	text-decoration: none !important
+
+	//hover 
+	&:hover 
+		color : white
+
+
+//Color White
+.btn-show-more--white
+	background: transparent 
+	border    : 1px solid white 
+	color     : white 
+	margin    : 0
+
+
+/* 
+ * FONDOS 
+ */
+.bg-more 
+	+opacity( 0 )
+	+transition( all 600ms ease )
+	align-items    : center
+	background     : rgba(0,0,0,.3)
+	bottom         : 0
+	display        : flex 
+	justify-content: center 
+	left           : 0 
+	position       : absolute 
+	right          : 0
+	top            : 0
+	z-index        : 999
+
+	a 
+		border         : 1px solid white 
+		color          : white 
+		display        : inline-block 
+		font-size      : 15px
+		font-weight    : 600
+		line-height    : 1em
+		padding        : 13px 22px 
+		text-decoration: none 
+
+
+/*
+ * REDES SOCIALES 
+ */
+#social-menu-link
+	display: inline-block
+	margin : 0 
+	padding: 0
+	li 
+		display : inline-block
+		padding : 0 5px  
+		a 
+			+transition( all 500ms ease-in )
+			color    : #00B8FA
+			display  : block 
+			font-size: 20px
+
+
+/*
+ * TÍTULOS PÁGINAS - SECCIONES - POST
+ */
+.titleOfSection
+	color      : #15573A 
+	font-family: "Arial" , sans-serif
+	font-size  : 30px
+	font-weight: 700
+	margin     : 0 auto 26px 
+	position   : relative
+	//before
+	&:before 
+		background: #15573A
+		bottom    : -10px
+		content   : ""
+		height    : 2px 
+		left      : 0
+		position  : absolute 
+		width     : 24px 
+
+.titleOfSection--white
+	color : white 
+	&:before 
+		background : white
+
+/* 
+ *  INDICADORES DE GALERÍA
+ */
+.gallery_indicators 
+	a 
+		+border-radius(50%)
+		+transition( all 500ms ease )
+		border : 1px solid black  
+		display: inline-block 
+		height : 14px 
+		margin : 0 3px 
+		width  : 14px
+		&.hover , &.active 
+			background: #FF385E
+
+/*
+ * BANNER DE PÁGINAS Y / O TAXONOMÍAS
+ */
+
+//Banner Top de Página
+#section-banner-top
+	max-height: 134px
+	overflow  : hidden
+
+	h2
+		+text-shadow( 1px 1px 5px black )
+		+translate(-50%,-50%)
+		color      : white
+		font-family: "Montserrat", sans-serif
+		font-size  : 35px
+		font-weight: 700
+		left       : 20%
+		margin     : 0
+		position   : absolute 
+		text-align : center 
+		top        : 60%
+
+
+//Banner de Página a Contacto
+#sectionBannerPage
+	background         : #17583B
+	color              : white
+	padding            : 18px
+	h2 
+		font-size  : 22px
+		font-weight: 600
+		margin     : 0 17px 0 0
+	span 
+		display       : inline-block
+		font-size     : 25px
+		line-height   : 1em
+
+.btn-to-contact
+	+box-shadow( inset 0px 0 0 0 transparent )
+	+transition( all 700ms ease )
+	border         : 1px solid white 
+	box-sizing     : border-box
+	color          : white
+	display        : inline-block
+	font-size      : 14px
+	line-height    : 1em
+	padding        : 10px 34px 
+	text-decoration: none !important 
+
+	//hover
+	&:hover 
+		+box-shadow( inset 200px 0 0 0 black )
+		color: white 
+	
+//Variación a negro 
+.btn-to-contact--black
+	border-color: black 
+	color       : black
+	//hover
+	&:hover 
+		+box-shadow( inset 200px 0 0 0 white )
+		color: black
+
+
+//Títulos
+.title-banner-tax
+	background : #666666
+	bottom     : 18px 
+	color      : white 
+	font-family: "Helvetica57"
+	font-size  : 27px
+	line-height: 1
+	margin     : 0
+	padding    : 13px 60px
+	position   : absolute 
+	right      : 193px 
+	z-index    : 9999
+
+/*
+ * FLECHAS DE CAROUSEL
+ */
+
+//Flechas
+.arrow-banner-tax
+	height     : 58px
+	position   : absolute
+	text-indent: -2000px
+	top        : 42%
+	width      : 34px
+	z-index    : 999
+	+transition(all 500ms ease)
+	//hover 
+	&:hover 
+		+opacity(.7)
+
+.arrow-banner-tax--prev
+	background: url('../images/arrow-left.png') no-repeat
+	left      : 0
+.arrow-banner-tax--next
+	background: url('../images/arrow-right.png') no-repeat
+	right     : 0
+
+/* Flechas de Galería */
+.arrow-common
+	+translateY(-50%)
+	color          : #17583B
+	font-size      : 45px 
+	line-height    : 1em 
+	position       : absolute 
+	text-decoration: none !important
+	top            : 50%
+	i
+		+transition( all 600ms ease )
+
+	&:focus , &:hover 
+		color : #17583B
+
+	&:hover 
+		i 
+			+scale(1.5)
+
+/* Arrow White */
+.arrow-common--white 
+	color : white
+
+	&:focus , &:hover 
+		color : white
+
+.arrow-common--left 
+	left : -33px
+.arrow-common--right 
+	right : -33px
+
+
+/*
+ * BREADCRUMBS
+ */
+#breadcrumbs
+	color          : black 
+	font-family    : "Helvetica57"
+	list-style-type: none
+	margin         : 16px 0 
+	padding        : 0 
+	li 
+		display  : inline-block 
+		font-size: 15px
+		padding  : 0 24px 0 0
+		position : relative 
+		//after
+		&:after 
+			+translate(-50%,-50%)
+			color      : black 
+			content    : ">"
+			font-size  : 13px 
+			line-height: 1em
+			position   : absolute
+			right      : 3px
+			top        : 50%
+		//last element
+		&:last-child 
+			&:after 
+				content : ''
+		a 
+			color          : black 
+			display        : block 
+			text-decoration: none 
+			+transition( all 500ms ease )
+			//hover
+			&:hover 
+				color : #FF385E
+
+
+/*
+ * PAGINADOR 
+ */
+.sectionPagination
+	margin : 20px auto 0
+	a 
+		+transition( all 500ms ease )
+		border         : 1px solid gray
+		color          : gray 
+		margin         : 0 2px 0 0
+		padding        : 6px 
+		text-decoration: none !important 
+
+		//hover  and active 
+		&:hover , &.active
+			background: #00B8FA
+			color     : white
+
+		//Paginator
+		&.arrow-paginator
+			color : gray
+
+		//disabled 
+		&.disabled
+			+opacity(.3)
+			cursor        : none 
+			pointer-events: none 
+			position      : relative
+
+/* 
+ * COMPARTIR - SECCION SINGLE /PAGE
+ */
+.sectionCommonShareLinks
+	ul 
+		list-style-type: none 
+		margin         : 0
+		padding        : 0
+		li 
+			display: inline-block
+			padding: 0 2px
+			//Primer Elemento
+			&:first-child
+				font-size: 13px 
+				padding  : 0 10px 0 0
+			//Item - a 
+			a 
+				background     : #E3E8E9 
+				color          : #A6A6A8
+				display        : inline-block 
+				height         : 21px 
+				justify-content: center  
+				text-align     : center
+				text-decoration: none 
+				width          : 21px
+				+transition( all 500ms ease-in-out )
+				//Hover
+				&:hover
+					color: white
+				//Clases Internas
+				&.social--fb
+					&:hover 
+						background: #11539C
+				&.social--tw
+					&:hover 
+						background: #00ACED
+				&.social--gplus
+					&:hover 
+						background: #DB4A39
+
+
+/*
+ * BARRAS LATERALES
+ */
+
+//Menú Social Links Bar fixed
+#fixed-social-menu-bar
+	list-style-type: none 
+	margin         : 0
+	padding        : 0
+	position       : fixed 
+	right          : 23px
+	top            : 120px
+	z-index        : 999999999
+	li 
+		+transition( all 700ms ease )
+		box-sizing: border-box 
+		height    : 25px 
+		padding   : 2px 0
+		width     : 25px 
+		
+		//clases
+		&.link-facebook
+			background: #00579E
+		&.link-twitter
+			background: #00B8FA
+		&.link-youtube
+			background: #FF131D
+
+		//hover 
+		&:hover 
+			+translateX( -5px )
+
+		a
+			color          : white 
+			display        : block
+			text-align     : center   
+			text-decoration: none
+
+/*
+ * LINEA DIVISORA
+ */
+
+#divisor-line
+	background     : url('../images/backgrounds/line-separator.png')
+	background-size: cover
+	height         : 5px
+	width          : 100%
+
+
+/*
+ * PÁGINAS 
+ */
+
+/* Galerías con thumbnails */
+.pageWithGallery	
+	.owl-controls	
+		.owl-dots
+			.owl-dot
+				+border-radius( 50% )
+				+transition( all 500ms ease )
+				border : 2px solid #B0B0B0
+				display: inline-block
+				height : 12px 
+				margin : 0 6px 0 0
+				width  : 12px
+				//active and hover
+				&.active , &:hover 
+					border: 2px solid black	
+
