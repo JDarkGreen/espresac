@@ -282,6 +282,31 @@ function changeImagesItem()
 
 }
 
+/*|----------------------------------------------------------------------|*/
+/*|-----  LAZY LOAD ELEMENTS   -----|*/
+/*|----------------------------------------------------------------------|*/
+
+function lazyLoadElements()
+{
+
+	j('.js-lazy-element').Lazy({
+
+		appendScroll: j('.gallery-fancybox'),
+
+		// your configuration goes here
+		scrollDirection: 'vertical',
+		effect         : "fadeIn",
+		effectTime     : 6000,
+		threshold      : 0,
+
+        onError: function(element) {
+            console.log('error loading ' + element.data('src') );
+        }
+        
+    });
+
+}
+
 
 (function($){
 /*|- LIMITE --------------------------------------------------------------|*/
@@ -309,11 +334,12 @@ function changeImagesItem()
 			'openSpeed'  : 300,
 			'closeSpeed' : 300,
 		});	
+
 		/*
 		 * Llamar funcion customiza para animacion cuando se hace
 		 * scroll
 		 */
-		scrollRevealElements();
+		//scrollRevealElements();
 
 		/*
 		 * Formulario validador y ajax
@@ -337,10 +363,15 @@ function changeImagesItem()
 		/*
 		 *  Función Zoom Elementos
 		 */
-		zoomtoItems();
+		//zoomtoItems();
 
 		//Funcion Cambiar Imágenes
-		changeImagesItem();
+		//changeImagesItem();
+
+		/*
+		 * LLamar a función Cargar Elementos Lazy
+		 */
+		lazyLoadElements();
 
 
 

@@ -20,7 +20,7 @@ $projects = get_posts( $args ); ?>
 <section id="sectionInicioProjects">
 
 	<!-- Wrapper -->
-	<div class="wrapperLayoutPage">
+	<div class="wrapperLayoutPage relative">
 
 		<!-- Título -->
 		<h2 class="titleOfSection titleOfSection--white text-uppercase">  
@@ -30,7 +30,6 @@ $projects = get_posts( $args ); ?>
 
 		<?php if( count($projects) > 1 ): ?>
 		
-		<div class="relative">
 			
 			<!-- Carousel  -->
 			<div id="carousel-project" class="section__single_gallery js-carousel-gallery" data-items="3" data-items-responsive="1" data-margins="17" data-dots="false" data-autoplay="true" data-timeautoplay="5000">
@@ -68,15 +67,13 @@ $projects = get_posts( $args ); ?>
 			</div> <!-- /carousel-project -->
 
 			<!-- Flechas de Carousel -->
-			<a href="#" class="js-carousel-prev arrow-common arrow-common--white arrow-common--left" data-slider="carousel-project">
+			<a href="#" class="js-carousel-prev arrow-common arrow-common--orange arrow-common--left" data-slider="carousel-project">
 				<i class="fa fa-angle-left" aria-hidden="true"></i>
 			</a>				
 
-			<a href="#" class="js-carousel-next arrow-common arrow-common--white arrow-common--right" data-slider="carousel-project">
+			<a href="#" class="js-carousel-next arrow-common arrow-common--orange arrow-common--right" data-slider="carousel-project">
 				<i class="fa fa-angle-right" aria-hidden="true"></i>
 			</a>
-
-		</div> <!-- /.relative -->
 
 		<?php endif; ?>
 

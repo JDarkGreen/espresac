@@ -63,22 +63,24 @@
 
 //Ver Más
 .btn-show-more
-	+border-radius( 8px )
-	+box-shadow( inset -2px -1px 7px 1px #008BBB ) 
-	background     : #00B0F2
-	color          : white 
-	display        : inline-block 
-	font-family    : 'Arial'
-	font-size      : 16px !important
-	line-height    : 1em
+	+box-shadow(inset 0 0 0 0 transparent)
+	+transition( color 1000ms ease-in, box-shadow 750ms ease-in-out)
+	background     : #15573A
+	border         : 1px solid transparent
+	color          : #fff
+	display        : inline-block
+	font-size      : 14px
 	margin         : 0 auto
-	padding        : 12px 25px
+	overflow       : hidden
+	padding        : 8px 30px
+	text-align     : center
 	text-decoration: none !important
-
+	vertical-align : middle
 	//hover 
 	&:hover 
-		color : white
-
+		+box-shadow( inset 300px 0 0 0 #fff )
+		border: 1px solid #15573A
+		color : #15573A
 
 //Color White
 .btn-show-more--white
@@ -158,6 +160,12 @@
 	&:before 
 		background : white
 
+/*
+ * Subtítulo de Sección
+ */
+.subtitleOfSection
+	
+
 /* 
  *  INDICADORES DE GALERÍA
  */
@@ -227,6 +235,11 @@
 		+box-shadow( inset 200px 0 0 0 black )
 		color: white 
 	
+//Variacion a naranja
+.btn-to-contact--orange
+	background  : #F36221
+	border-color: #F36221
+
 //Variación a negro 
 .btn-to-contact--black
 	border-color: black 
@@ -286,13 +299,17 @@
 	top            : 50%
 	i
 		+transition( all 600ms ease )
-
-	&:focus , &:hover 
-		color : #17583B
-
+		
 	&:hover 
 		i 
 			+scale(1.5)
+
+.arrow-common--left 
+	left : -33px
+.arrow-common--right 
+	right : -33px
+
+
 
 /* Arrow White */
 .arrow-common--white 
@@ -301,10 +318,22 @@
 	&:focus , &:hover 
 		color : white
 
-.arrow-common--left 
-	left : -33px
-.arrow-common--right 
-	right : -33px
+/* Arrow Orange */
+.arrow-common--orange
+	background : #F36221
+	color      : white 
+	font-size  : 35px 
+	height     : 40px
+	line-height: 1 
+	text-align : center
+	width      : 40px
+
+	//Sobrescribir
+	&.arrow-common--left 
+		left : -6%	
+	&.arrow-common--right
+		right : -6%
+
 
 
 /*
@@ -350,6 +379,13 @@
  */
 .sectionPagination
 	margin : 20px auto 0
+
+	span 
+		color    : #15573A
+		display  : inline-block
+		font-size: 15px
+		margin   : 0 10px 0 0
+
 	a 
 		+transition( all 500ms ease )
 		border         : 1px solid gray
@@ -360,7 +396,7 @@
 
 		//hover  and active 
 		&:hover , &.active
-			background: #00B8FA
+			background: #15573A
 			color     : white
 
 		//Paginator

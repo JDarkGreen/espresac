@@ -22,10 +22,13 @@
 		margin         : 0 auto 10px
 		width          : 100% 
 
-		//hover 
-		&:hover 
-			.bg-more 
-				+opacity(1)
+	//hover 
+	&:hover 
+		.bg-more 
+			+opacity(1)
+
+		h2 
+			background : #F36221
 
 	//Title 
 	h2
@@ -35,16 +38,7 @@
 		font-weight: 700
 		line-height: 1em
 		padding    : 13px 0 
-
-//Productos Destacados
-.itemProductPreview--featured
-	margin-right: 37px
-	max-width   : calc( 100%/3 - (37px*2) / 3 )
-
-	//terceros elementos y ultimos
-	&:nth-child(3n) , &:last-child 
-		margin-right : 0px 
-
+		+transition( all 500ms ease )
 
 //Buttom details producto
 .btn-details-product	
@@ -66,44 +60,75 @@
 		+box-shadow( inset 300px 0 0 0 black )
 		color: white 
 
-//Single Detail Product
-.singleDetailProduct
-	
-	//Imágen Destacada
-	.featured-image 
-		border : 1px solid #C5C5C5
-
-	//Indicadores de galería
-	.gallery_indicator 
-		border    : 1px solid #C5C5C5
-		box-sizing: border-box
-		display   : inline-block 
-		padding   : 1px
-
 //Título de Producto
-.productTitle
-	font-family: 'Helvetica57'
-	font-size  : 16px
-	font-weight: 600
-//Codigo
-.productCode
-	font-family: 'Helvetica57'
-	font-size  : 14px
-	font-weight: 600
+.titleOfProduct
+	background         : url('../images/icon/icon-chevron-left.png') no-repeat 
+	background-position: left 2px
+	border-bottom      : 1px dotted rgba(0,0,0,.5)
+	color              : #013421
+	font-family        : "Montserrat"
+	font-size          : 20px 
+	line-height        : 1em
+	margin             : 0 auto 20px
+	padding            : 0 0 5px 25px
 
-//Detalles Títulos
-.detailTitle
-	font-size  : 14px
-	font-family: 'Helvetica57'
-	font-weight: 600
+//Título Módulo de Productos
+.titleModuleOfProducts
+	border-bottom: 1.8px solid #013421
+	color        : #444444
+	font-family  : "Montserrat"
+	font-size    : 18px
+	padding      : 0 0 10px
+	position     : relative
+	//after
+	&:after 
+		background: #013421
+		bottom    : 0 
+		content   : ""
+		height    : 2px
+		left      : 0 
+		position  : absolute
+		width     : 55%
 
-//Item color
-.item-color
-	i
-		+border-radius(50%)
-		border        : 0.5px solid rgba(0,0,0,.1)
-		display       : inline-block 
-		height        : 15px 
-		margin        : 0 5px 0 0
-		vertical-align: middle  
-		width         : 15px
+//Módulo de Productos
+.module-products
+	a 
+		+transition( all 250ms ease-in )
+		background         : url('../images/icon/icon-chevron-left.png') no-repeat
+		background-position: 7px center  
+		border-bottom      : 1px solid rgba(0,0,0,.3)
+		color              : gray
+		display            : block 
+		font-size          : 13px 
+		padding            : 6px 6px 6px 30px
+		text-decoration    : none !important
+		text-transform     : uppercase
+
+		//hover and active
+		&:hover , &.active
+			background-color   : #15573A
+			background-position: 15px center  
+			color              : white 
+			padding-left       : 40px
+
+//Arrow de Carousel
+.arrow-product
+	align-items    : center
+	background     : rgba(0,0,0,.5)
+	bottom         : 0
+	color          : white
+	display        : flex
+	font-size      : 35px
+	justify-content: center
+	position       : absolute
+	text-decoration: none !important
+	top            : 0
+	width          : 45px
+	z-index        : 999
+	&:hover 
+		color : white
+
+.arrow-product--left 
+	left : 0
+.arrow-product--right 
+	right : 0

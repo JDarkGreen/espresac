@@ -7,13 +7,15 @@
  /*
   * Item Multimedia
   */
-.itemMultimedia
-	margin: 0 14px 14px 0 
-	width : calc( 100%/3 - (2*14px) / 3 )
-	//Ultimos y terceros elementos
-	&:nth-child(3n) , &:last-child
-		margin-right : 0
-
+.ImagePreview
+	margin  : 0 auto 40px
+	overflow: hidden 
+	
+	img 
+		+transition( all 600ms ease-in )
+	&:hover 
+		img 
+			+scale(1.5)
 
 /*
  * Item Videos

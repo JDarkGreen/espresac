@@ -17,7 +17,7 @@ $email = isset($options['theme_email_text']) && !empty($options['theme_email_tex
 		<h2 class="text-uppercase"> 
 		<?= __( "consulte acerca de nuestros servicios" , LANG ); ?></h2>
 
-		<a href="<?= $banner_link; ?>" class="btn-to-contact text-uppercase"> <?= __( 'click aquí' , LANG ); ?> </a>
+		<a href="<?= $banner_link; ?>" class="btn-to-contact btn-to-contact--orange text-uppercase"> <?= __( 'click aquí' , LANG ); ?> </a>
 
 	</div> <!-- /.content-text -->
 
