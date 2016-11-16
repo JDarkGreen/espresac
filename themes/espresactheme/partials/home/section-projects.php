@@ -48,7 +48,7 @@ $projects = get_posts( $args ); ?>
 
 						<figure class="image-preview relative">
 							
-							<img src="<?= $image_url; ?>" alt="<?= $alt_img; ?>" class="d-block m-x-auto" />
+							<img src="<?= $image_url; ?>" alt="<?= $alt_img; ?>" class="d-block m-x-auto img-fluid" />
 							
 							<span class="bg-more">
 								<a href="<?= get_permalink( $project->ID ); ?>" title="<?= $project->post_title; ?>" class="text-uppercase"> 
