@@ -57,6 +57,44 @@
 	background: #F1F1F1
 
 
+/*
+ * Preview dentro de la Página Blog
+ */
+.PreviewPostPageBlog
+	margin : 0 auto 50px
+
+	figure 
+		background-size: cover 
+		height         : 235px
+		margin         : 0 auto 30px
+		+transition( all 600ms ease )
+
+		//:hover
+		&:hover 
+			+opacity( .9 )
+			+scale( .96 )
+
+	figcaption
+		background : #032725
+		box-sizing : border-box
+		color      : #fff
+		font-weight: 600
+		padding    : 8px
+		position   : absolute
+		right      : 10px
+		top        : 15px
+
+	//´Título
+	h3 
+		color      : #00643C
+		font-size  : 24px
+		font-weight: 600
+
+	//Extracto 
+	.excerpt-post
+		max-height: 68px
+		overflow  : hidden 
+
 //Detalles de Post
 .singleDetailPost
 	

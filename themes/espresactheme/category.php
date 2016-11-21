@@ -1,11 +1,13 @@
 <?php 
-
-/* Template Name: Page Blog Template */
+/*
+ * Plantilla para todas las categorías 
+ * del Tema.
+ */
 
 /*
  * Objecto Actual
  */
-global $post;
+$current_object = get_queried_object();
 
 /*
  * Mostrar Header
@@ -23,7 +25,8 @@ $options = get_option("theme_settings");
  */ 
 
 $banner      = $post;
-$path_banner = realpath( dirname(dirname(__FILE__)) . '/partials/pages/banner-top-page.php' );
+$path_banner = realpath( dirname(__FILE__) . '/partials/pages/banner-top-page.php' );
+
 if(stream_resolve_include_path($path_banner)) 
 include($path_banner); 
 
@@ -39,6 +42,7 @@ $args = array(
 	'order'          => 'DESC',
 	'orderby'        => 'modified',
 	'paged'          => $paged,
+	'cat'            => $current_object->term_id,
 	'post_status'    => 'publish',
 	'post_type'      => 'post',
 	'posts_per_page' => $posts_per_page, );
@@ -59,7 +63,7 @@ $the_query = new WP_Query( $args ); ?>
 				
 				<!-- Título -->
 				<h2 class="titleOfSection text-uppercase">  
-				<?= __( 'Blog' , LANG ); ?> </h2>
+				<?= __( $current_object->name , LANG ); ?> </h2>
 
 				<?php if( $the_query->have_posts() ): ?>
 
@@ -152,7 +156,7 @@ $the_query = new WP_Query( $args ); ?>
 				/*
 				 * Incluir template de Categorías
 				 */
-				$path_cats = realpath( dirname(dirname(__FILE__)) . '/partials/sidebar/categories-post.php' );
+				$path_cats = realpath( dirname(__FILE__) . '/partials/sidebar/categories-post.php' );
 
 				if( $path_cats ) include($path_cats);
 
