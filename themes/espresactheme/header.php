@@ -83,7 +83,7 @@
 			<header id="mainHeader">
 				
 				<!-- Wrapper Header -->
-				<div class="wrapperHeader">
+				<div class="wrapperHeader hidden-xs-down">
 					
 					<div class="flexible flexible-wrap align-items-center">
 

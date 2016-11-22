@@ -65,11 +65,11 @@ $productos = get_posts( $args ); ?>
 				</div> <!-- #carousel-products -->
 
 				<!-- Flechas de Carousel -->
-				<a href="#" class="js-carousel-prev arrow-common arrow-common--left" data-slider="carousel-products">
+				<a href="#" class="js-carousel-prev arrow-common arrow-common--left hidden-xs-down" data-slider="carousel-products">
 					<i class="fa fa-angle-left" aria-hidden="true"></i>
 				</a>				
 
-				<a href="#" class="js-carousel-next arrow-common arrow-common--right" data-slider="carousel-products">
+				<a href="#" class="js-carousel-next arrow-common arrow-common--right hidden-xs-down" data-slider="carousel-products">
 					<i class="fa fa-angle-right" aria-hidden="true"></i>
 				</a>
 

@@ -20,7 +20,7 @@ $options = get_option('theme_settings'); ?>
 			<!-- Item -->
 			<div class="col-xs-12 col-sm-4">
 				
-				<div class="item-footer item--first">
+				<div class="item-footer item--first text-xs-center">
 
 					<br />
 
@@ -28,6 +28,10 @@ $options = get_option('theme_settings'); ?>
 					<h2 id="logo-footer">
 						<img src="<?= IMAGES ?>/logo_espre_sac_blanco.png" alt="<?php bloginfo('description'); ?>" class="img-fluid d-block m-x-auto" />
 					</h2> <!-- /.logo --> 
+
+					<a id="link-to-web" class="" href="<?= site_url()?>" title="<?= get_bloginfo('name') ?>">
+						www.espresac.com.pe
+					</a>
 
 				</div> <!-- /.item-footer -->
 

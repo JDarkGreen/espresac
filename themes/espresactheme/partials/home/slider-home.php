@@ -56,8 +56,8 @@
 				  <img src="<?= $feat_img ?>"  alt=""  width="1920" height="1080" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina />
 
           <div class="tp-caption maincaption"
-            data-x="[188,100,30,10]" data-hoffset="0"
-            data-y="['bottom',100,30,10]" data-voffset="0"
+            data-x="[188,30]" data-hoffset="0"
+            data-y="['bottom',100]" data-voffset="0"
             data-transform_idle="o:1;"
             data-transform_in="y:50px;opacity:0;s:700;e:Power3.easeOut;"
             data-transform_out="y:50px;opacity:0;s:500;e:Power2.easeInOut;

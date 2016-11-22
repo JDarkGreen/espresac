@@ -72,6 +72,8 @@ include($path_banner); ?>
 
 					if( $path_social ) include( $path_social ); ?>
 
+					<!-- Espacio --> <br /><br />
+
 				</section> <!-- /section -->
 
 			</div> <!-- /col-xs-6 -->

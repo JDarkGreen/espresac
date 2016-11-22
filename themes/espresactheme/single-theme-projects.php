@@ -67,6 +67,11 @@ $projects = get_posts( $args ); ?>
 
 				<a href="<?= !empty($page_project) ? get_permalink($page_project->ID) : '#' ?>" class="btn-show-more text-uppercase" title="Obras projectos Realizados "> Regresar </a>
 				
+				<!-- Espacio --> 
+				<div class="clearfix hidden-sm-up">
+					<hr/>
+				</div>
+
 			</div> <!-- /.col-xs-12 col-sm- -->
 
 			<div class="col-xs-12 col-sm-6">

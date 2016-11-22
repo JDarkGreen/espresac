@@ -53,6 +53,18 @@ $the_query = new WP_Query( $args ); ?>
 	<!-- Wrapper -->
 	<div class="wrapperLayoutPage">
 
+		<!-- Menú Mobile only -->
+		<div class="hidden-sm-up">
+	
+			<button id="" class="menu-mobile js-sidebar-effects" data-effect="st-effect-13"> <i class="fa fa-bars" aria-hidden="true"></i> 
+				<?= __( 'Categorías de Blog' , LANG ); ?>
+			</button> <!-- #btn-menu-mobile -->
+
+			<br />
+			
+		</div> <!-- /.hidden-sm-up -->
+		
+		<!-- Row -->
 		<div class="row">
 
 			<div class="col-xs-12 col-sm-8">
@@ -96,7 +108,8 @@ $the_query = new WP_Query( $args ); ?>
 								<p class="excerpt-post text-justify"> 
 								<?php 
 
-								$content = wp_trim_words( 'the_content' ,  wp_strip_all_tags( get_the_content() ) , 20 , '' ); 
+								$content = wp_strip_all_tags( get_the_content() );
+								$content = wp_trim_words( $content , 20 , '...' );
 								
 								echo !empty($content) ? $content : "Contenido en mantenimiento";
 								?> </p> <!-- /.text-justify -->

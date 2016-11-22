@@ -23,8 +23,9 @@ $options = get_option("theme_settings");
 /*
  * Template banner de página
  */ 
+$page_blog   = get_page_by_title('blog');
 
-$banner      = $post;
+$banner      = $page_blog;
 $path_banner = realpath( dirname(__FILE__) . '/partials/pages/banner-top-page.php' );
 
 if(stream_resolve_include_path($path_banner)) 
@@ -56,6 +57,8 @@ $the_query = new WP_Query( $args ); ?>
 
 	<!-- Wrapper -->
 	<div class="wrapperLayoutPage">
+
+		<!-- Blog -->
 
 		<div class="row">
 
@@ -100,7 +103,8 @@ $the_query = new WP_Query( $args ); ?>
 								<p class="excerpt-post text-justify"> 
 								<?php 
 
-								$content = wp_trim_words( 'the_content' ,  wp_strip_all_tags( get_the_content() ) , 20 , '' ); 
+								$content = wp_strip_all_tags( get_the_content() );
+								$content = wp_trim_words( $content , 20 , '...' ); 
 								
 								echo !empty($content) ? $content : "Contenido en mantenimiento";
 								?> </p> <!-- /.text-justify -->

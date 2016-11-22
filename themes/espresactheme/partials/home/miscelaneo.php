@@ -11,7 +11,7 @@ $args = array(
 	'orderby'        => 'date',
 	'post_status'    => 'publish',
 	'post_type'      => 'post',
-	'posts_per_page' => 3,  );  
+	'posts_per_page' => 2,  );  
 
 $entradas = get_posts( $args );  ?>
 
@@ -60,13 +60,13 @@ $entradas = get_posts( $args );  ?>
 
 								<!-- Extracto -->
 								<?php 
-									$limit_words = 35;
+									$limit_words = 20;
 									
 									$content     = $entrada->post_content;
 									$content     = apply_filters( 'the_content' , $content  );
 									
 									$content     = array_slice( explode(' ' , $content ) , 0 , $limit_words );
-									echo $content     = implode( ' ' , $content ); ?>
+									echo $content = implode( ' ' , $content ) . '... '; ?>
 
 								<a href="<?= get_permalink( $entrada->ID ); ?>" class="read-more"> <?= __( 'Leer más' , LANG ); ?> </a>
 								

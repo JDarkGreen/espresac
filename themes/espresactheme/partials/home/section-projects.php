@@ -67,11 +67,11 @@ $projects = get_posts( $args ); ?>
 			</div> <!-- /carousel-project -->
 
 			<!-- Flechas de Carousel -->
-			<a href="#" class="js-carousel-prev arrow-common arrow-common--orange arrow-common--left" data-slider="carousel-project">
+			<a href="#" class="js-carousel-prev arrow-common arrow-common--orange arrow-common--left hidden-xs-down" data-slider="carousel-project">
 				<i class="fa fa-angle-left" aria-hidden="true"></i>
 			</a>				
 
-			<a href="#" class="js-carousel-next arrow-common arrow-common--orange arrow-common--right" data-slider="carousel-project">
+			<a href="#" class="js-carousel-next arrow-common arrow-common--orange arrow-common--right hidden-xs-down" data-slider="carousel-project">
 				<i class="fa fa-angle-right" aria-hidden="true"></i>
 			</a>
 

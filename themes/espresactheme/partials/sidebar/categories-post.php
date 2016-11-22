@@ -17,8 +17,8 @@ $categories = get_categories( array('parent'=>0,'hide_empty'=>false) ); ?>
 <section class="sectionCategoryItems">
 	
 	<!-- Título -->
-	<h2 class="titleOfSection text-uppercase"> 
-	<?= __( 'Categorías' , LANG ); ?> </h2>
+	<h4 class="titleOfSection titleOfSection--white text-uppercase"> 
+	<?= __( 'Categorías' , LANG ); ?> </h4>
 
 	<div class="container-categories container-categories--blog">
 		

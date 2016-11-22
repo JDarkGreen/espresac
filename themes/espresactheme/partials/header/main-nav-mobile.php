@@ -19,12 +19,8 @@
 	
 <?php
 
-//Menú Lateral Izquierdo
+//Menú Lateral Principal
 wp_nav_menu(
-	array( 'menu_class'  => 'left-menu', 'theme_location' => 'left-menu' )); 
-
-//Menú Lateral Derecho
-wp_nav_menu(
-	array( 'menu_class'  => 'right-menu', 'theme_location' => 'right-menu' )); ?>
+	array( 'menu_class'  => 'main-menu', 'theme_location' => 'main-menu' )); ?>
 
 </nav> <!-- /navMobile -->
