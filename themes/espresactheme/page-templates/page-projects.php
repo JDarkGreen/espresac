@@ -74,7 +74,7 @@ $the_query = new WP_Query( $args ) ?>
 						<!-- Imagen -->
 						<figure class="image-preview relative">
 							
-							<img src="<?= $image_url; ?>" alt="<?= $alt_img; ?>" class="d-block m-x-auto img-fluid" />
+							<img src="<?= $image_url; ?>" alt="<?= $image_alt; ?>" class="d-block m-x-auto img-fluid" />
 							
 							<span class="bg-more">
 								<a href="<?= get_permalink(); ?>" title="<?= get_the_title(); ?>" class="text-uppercase"> 
