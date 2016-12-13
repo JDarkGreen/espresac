@@ -39,6 +39,7 @@ $args = array(
 	'post_type'      => 'theme-products',
 	'orderby'        => 'meta_value_num',
 	'order'          => 'ASC',
+	'post__not_in'   => array( 31,33,34 ) , //excluir temporalmente
 	'posts_per_page' => -1, );
 
 $products = get_posts( $args );
