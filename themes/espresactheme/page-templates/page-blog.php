@@ -56,7 +56,7 @@ $the_query = new WP_Query( $args ); ?>
 		<!-- Menú Mobile only -->
 		<div class="hidden-sm-up">
 	
-			<button id="" class="menu-mobile js-sidebar-effects" data-effect="st-effect-13"> <i class="fa fa-bars" aria-hidden="true"></i> 
+			<button id="" class="menu-mobile js-sidebar-effects" data-effect="st-effect-2"> <i class="fa fa-bars" aria-hidden="true"></i> 
 				<?= __( 'Categorías de Blog' , LANG ); ?>
 			</button> <!-- #btn-menu-mobile -->
 

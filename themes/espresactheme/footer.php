@@ -38,25 +38,36 @@ $options = get_option('theme_settings'); ?>
 			</div> <!-- /.col-xs-12 col-sm-4 -->
 						
 			<!-- Item -->
-			<div class="col-xs-12 col-sm-5 text-xs-center">
+			<div class="col-xs-12 col-sm-5">
 
 				<div class="item-footer item--middle">
 	
 					<!-- Título -->
-					<h2 class="title-footer text-uppercase"> 
+					<h2 class="title-footer text-uppercase text-xs-center"> 
 					<?= __( "encuéntranos" , LANG );?> </h2>
 
 					<?php if( isset($options['theme_address_text']) && !empty($options['theme_address_text']) ): ?>
-					<!-- Address -->
-					<span class="flexible flexible-wrap space-around">
-						<i class="fa fa-map-marker" aria-hidden="true"></i>
-						<?= apply_filters( 'the_content' , $options['theme_address_text'] ); ?>
-					</span>
-					<?php endif; ?>	
 
-					<?php  
-					if(stream_resolve_include_path('partials/footer/menu-social-footer.php')) 
-					include('partials/footer/menu-social-footer.php'); ?>
+						<!-- Address -->
+						<span class="flexible flexible-wrap space-around">
+							
+							<i class="fa fa-map-marker" aria-hidden="true"></i>
+
+							<div class="text-address">
+								<?= apply_filters( 'the_content' , $options['theme_address_text'] ); ?>
+							</div>
+
+						</span>
+
+					<?php endif; ?>	
+					
+					<div class="text-xs-center">
+					
+						<?php  
+						if(stream_resolve_include_path('partials/footer/menu-social-footer.php')) 
+						include('partials/footer/menu-social-footer.php'); ?>
+
+					</div> <!-- /.text-xs-center -->
 					
 				</div> <!-- /.item-footer -->
 							
@@ -94,7 +105,6 @@ $options = get_option('theme_settings'); ?>
 
 </div><!-- /st-content -->
 
-</div><!-- /st-pusher -->
 
 </div><!-- /st-container -->
 

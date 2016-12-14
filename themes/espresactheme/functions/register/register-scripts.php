@@ -55,7 +55,7 @@ function load_custom_scripts()
 	wp_enqueue_script( 'wp-jquery-lazy-load-js' , THEMEROOT . '/assets/js/vendor/lazy/jquery.lazy.min.js' , array('jquery') , '1.7.4' , true );
 
 	//Registrar Custom Script Personalizado
-	wp_register_script( 'wp-js-custom_script' , THEMEROOT . '/assets/js/source/script.js' , array('jquery') , '1.0' , true );
+	wp_register_script( 'wp-js-custom_script' , THEMEROOT . '/assets/js/source/script.min.js' , array('jquery') , '1.0' , true );
 
 	//Localización enviar nueva data
 	$theme_data = array(
