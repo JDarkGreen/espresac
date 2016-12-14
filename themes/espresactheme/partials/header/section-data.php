@@ -31,6 +31,9 @@ for ($i=1; $i <= 2 ; $i++)
 		<!-- Número de Teléfono -->
 		<?= isset($options['theme_phone_text_1']) ? $options['theme_phone_text_1'] : ''; ?>	
 
+		<!-- Espacio --> 
+		<?= '  /  '; ?>
+
 		<!-- Número de Celular -->
 		<?= isset($options['theme_cel_text_1']) ? $options['theme_cel_text_1'] : ''; ?>
 		
