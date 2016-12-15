@@ -73,3 +73,19 @@ $path_function_id_youtube = realpath( dirname(dirname(__FILE__)) . '/custom-func
 if( stream_resolve_include_path($path_function_id_youtube) )
 include($path_function_id_youtube);
 
+
+/**
+* ---------------------------------------------------------------
+* -- REMOVER Desactivar la creación de copias de imágenes 				
+* ---------------------------------------------------------------
+**/
+
+function wp_quita_copias_imagenes( $sizes ) {
+       
+    unset( $sizes['thumbnail']);
+    unset( $sizes['medium']);
+    unset( $sizes['large']);
+    return $sizes;
+}
+
+add_filter('intermediate_image_sizes_advanced', 'wp_quita_copias_imagenes');

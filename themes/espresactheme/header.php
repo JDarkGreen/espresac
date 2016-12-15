@@ -39,6 +39,9 @@
 
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" />
+
+	<!-- FUENTES  -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
 	
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>

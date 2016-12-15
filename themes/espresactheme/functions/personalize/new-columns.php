@@ -30,6 +30,9 @@ function add_thumbnail_columns( $columns ) {
         $columns['featured_thumb'] = "Video Embebido";
     endif;
 
+    //Unsetear los comentarios
+    unset( $columns['comments'] );
+
     return $columns;
 }
 
@@ -104,3 +107,35 @@ if ( function_exists( 'add_theme_support' ) ) :
         add_action( "manage_".$post_type."_posts_custom_column" , 'add_thumbnail_columns_data', 10, 2 );
     endforeach;
 endif;
+
+
+/*
+ * SOLO PARA MEDIA 
+ */
+add_filter( 'manage_media_columns', 'wpse_remove_media_columns' );
+
+function wpse_remove_media_columns( $columns )
+{
+    unset( $columns['author'] );
+    unset( $columns['comments'] );
+
+    if( isset($columns['wpmf_size']) ){ unset($columns['wpmf_size']); }
+    if( isset($columns['optimus']) ){ unset($columns['optimus']); }
+    
+    return $columns;
+}
+
+
+/*
+ * MODIFICAR ESTILOS DE COLUMNAS
+ */
+
+add_action('admin_head', 'my_admin_custom_styles');
+
+function my_admin_custom_styles() 
+{
+    $output_css = '<style type="text/css">
+        #title { width: 34%; }
+    </style>';
+    echo $output_css;
+}
