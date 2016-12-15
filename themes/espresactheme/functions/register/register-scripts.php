@@ -7,29 +7,22 @@
 /*
  * DE registrar jquery y colocarlos al final
  */
-add_action( 'init' , 'enqueue_jquery_init');
+add_action( 'wp_enqueue_scripts', function(){
+    
+    if (is_admin()) return; // don't dequeue on the backend
+    
+    wp_deregister_script( 'jquery' );
+    wp_register_script( 'jquery' , home_url('/wp-includes/js/jquery/jquery.js') , FALSE, '1.12.4', TRUE);  
+    wp_enqueue_script( 'jquery');
 
-function enqueue_jquery_init()   
-{  
-    if (!is_admin())   
-    {  
-        wp_deregister_script('jquery');  
-        wp_deregister_script('jquery-migrate');  
-  
-        // Load the copy of jQuery that comes with WordPress  
-        // The last parameter set to TRUE states that it should be loaded  
-        // in the footer.  
-        wp_register_script( 'jquery' , home_url('/wp-includes/js/jquery/jquery.js') , FALSE, '1.12.4', TRUE);  
-        wp_enqueue_script('jquery');          
+    wp_deregister_script( 'jquery-migrate' );
+    wp_register_script( 'jquery-migrate' , home_url('/wp-includes/js/jquery/jquery-migrate.min.js') , FALSE, '1.4.1', TRUE); 
+    wp_enqueue_script( 'jquery-migrate');
 
-        wp_register_script( 'jquery-migrate' , home_url('/wp-includes/js/jquery/jquery-migrate.min.js') , FALSE, '1.4.1', TRUE);  
-        wp_enqueue_script('jquery-migrate');  
+});
 
-    }  
-}  
 
-  
-
+ 
 
 function load_custom_scripts()
 {
