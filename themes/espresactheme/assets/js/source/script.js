@@ -194,8 +194,6 @@ function sendDataFormularybyAjax( formulario )
 			
 		},function(data){
 
-			console.log(data);
-
 			var dataParse = JSON.parse(data);
 
 			if( String(dataParse.exito) == 'ok' )
