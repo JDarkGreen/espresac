@@ -167,9 +167,17 @@ $the_query = new WP_Query( $args ); ?>
 				 */
 				$path_cats = realpath( dirname(dirname(__FILE__)) . '/partials/sidebar/categories-post.php' );
 
-				if( $path_cats ) include($path_cats);
+				if( $path_cats ) include($path_cats); ?>
+				
+				<!-- Espacio --> <br />
 
-				?>
+				<?php 
+				/*
+				 * Incluir Section de Facebook
+				 */
+				$path_fb = realpath( dirname(dirname(__FILE__)) . '/partials/common-section/fan-page-facebook.php' );
+
+				if( $path_fb ) include($path_fb); ?>
 				
 			</div> <!-- /.col-xs-12 col-sm-  -->
 			

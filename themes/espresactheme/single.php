@@ -68,6 +68,11 @@ include($path_banner);  ?>
 				<!-- Contenido -->
 				<?= apply_filters( 'the_content' , $post->post_content ); ?>
 
+				<!-- Espacio --> <br />
+				
+				<!-- Botón Compartir Fb -->
+				<div class="fb-share-button" data-href="<?= get_permalink($post->ID) ?>" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?= get_permalink($post->ID) ?>">Compartir</a></div>	
+
 			</div> <!-- /.col-xs-12 col-sm-  -->
 
 
@@ -79,9 +84,17 @@ include($path_banner);  ?>
 				 */
 				$path_cats = realpath( dirname(__FILE__) . '/partials/sidebar/categories-post.php' );
 
-				if( $path_cats ) include($path_cats);
+				if( $path_cats ) include($path_cats);  ?>
 
-				?>
+				<!-- Espacio --> <br/>
+
+				<?php 
+				/*
+				 * Incluir Section de Facebook
+				 */
+				$path_fb = realpath( dirname(__FILE__) . '/partials/common-section/fan-page-facebook.php' );
+
+				if( $path_fb ) include($path_fb); ?>
 				
 			</div> <!-- /.col-xs-12 col-sm-  -->
 			
@@ -92,7 +105,18 @@ include($path_banner);  ?>
 </main> <!-- /.pageContentLayout -->
 
 
-<?php 
+<!-- Script Facebook -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.8&appId=382358125269432";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<?php
+
 /*
  * Footer 
  */
