@@ -135,7 +135,7 @@ add_action('admin_head', 'my_admin_custom_styles');
 function my_admin_custom_styles() 
 {
     $output_css = '<style type="text/css">
-        #title { width: 34%; }
+        #title { width: 20%; }
     </style>';
     echo $output_css;
 }
